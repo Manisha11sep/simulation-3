@@ -1,0 +1,1 @@
+UPDATE posts SET content = $4 WHERE id = $1;
