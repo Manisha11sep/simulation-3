@@ -15,14 +15,14 @@ componentDidMount() {
 axios.get('/api/posts').then(response => {
     console.log("user name is ",response.data);
     this.setState(
-        {posts: response.data.posts, username: response.data })
+        {posts: response.data.posts, username: response.data.user })
   
     console.log("data is ", response.data);
 })
 }
 render() {
   let postList = this.state.posts.map((post,i) => (
-      <div>
+      <div key={i}>
       <p>Title: {post.title}</p>
       <p>Author: {post.author}</p>
       <p>content: {post.content}</p>

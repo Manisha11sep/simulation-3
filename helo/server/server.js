@@ -12,11 +12,11 @@ app.use(bodyParser.json());
 app.use(cors());
 massive( process.env.CONNECTION_STRING ).then( dbInstance => app.set('db', dbInstance) );
 app.use(session({
-    secret: 'dgdfg',
+    secret: 'nkjkjkl',
     saveUninitialized: false,
     resave: false,
     cookie :{
-        maxAge: 1000 *60,
+        maxAge: 1000 *600,
     },
 
 }));
